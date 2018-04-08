@@ -28,5 +28,5 @@ def setup_metrics(application):
     application.before_request(start_timer)
     # The order here matters since we want stop_timer
     # to be executed first
-    app.after_request(record_request_data)
-    app.after_request(stop_timer)
+    application.after_request(record_request_data)
+    application.after_request(stop_timer)
