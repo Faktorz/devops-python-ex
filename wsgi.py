@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, Response
 from middleware import setup_metrics
 import prometheus_client
 
