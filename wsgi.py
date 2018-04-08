@@ -1,5 +1,8 @@
 from flask import Flask
+from middleware import setup_metrics
+
 application = Flask(__name__)
+setup_metrics(application)
 
 @application.route("/")
 def hello():
