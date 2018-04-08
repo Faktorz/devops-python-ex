@@ -13,12 +13,7 @@ def hello():
 
 @application.route('/test/')
 def test():
-    return 'rest'
-
-@application.route('/test1/')
-def test1():
-    1/0
-    return 'rest'
+    return 'Hello Test!!'
 
 @application.errorhandler(500)
 def handle_500(error):
@@ -27,6 +22,3 @@ def handle_500(error):
 @application.route('/metrics')
 def metrics():
     return Response(prometheus_client.generate_latest(), mimetype=CONTENT_TYPE_LATEST)
-
-if __name__ == "__main__":
-    application.run()
