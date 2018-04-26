@@ -27,5 +27,5 @@ In this case, because no language type was specified, OpenShift will determine t
 If needing to select a specific Python version when using ``oc new-app``, you should instead use the form:
 
 ```
-oc new-app python:2.7~https://github.com/OpenShiftDemos/os-sample-python.git
+oc new-app python:2.7~https://github.com/thedigitalgarage/devops-python-ex.git
 ```
