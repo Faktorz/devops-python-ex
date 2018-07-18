@@ -1,6 +1,6 @@
 # DevOps Example Pipeline.
 
-This repository provides a sample Python web application implemented using the Flask web framework and hosted using ``gunicorn``. It is intended to be used to demonstrate deployment of Python web applications to The Digital Garage via a CI/CD pipeline.
+This repository provides a sample Python web application implemented using the Flask web framework and hosted using ``gunicorn``. It is intended to be used to demonstrate deployment of Python web applications to FaktorZ via a CI/CD pipeline.
 
 ## Implementation Notes
 
@@ -19,7 +19,7 @@ In addition, the ``.s2i/environment`` file has been created to allow environment
 Using the ``oc`` command line tool to deploy this sample Python web application, you can run:
 
 ```
-oc new-app --name=py-demo-app openshift/python:latest~https://github.com/thedigitalgarage/devops-python-ex.git#master
+oc new-app --name=py-demo-app openshift/python:latest~https://github.com/faktorz/devops-python-ex.git#master
 ```
 
 In this case, because no language type was specified, OpenShift will determine the language by inspecting the code repository. Because the code repository contains a ``requirements.txt``, it will subsequently be interpreted as including a Python application. When such automatic detection is used, ``python:latest`` will be used.
@@ -27,5 +27,5 @@ In this case, because no language type was specified, OpenShift will determine t
 If needing to select a specific Python version when using ``oc new-app``, you should instead use the form:
 
 ```
-oc new-app python:3.6.5~https://github.com/thedigitalgarage/devops-python-ex.git
+oc new-app python:3.6.5~https://github.com/faktorz/devops-python-ex.git
 ```
