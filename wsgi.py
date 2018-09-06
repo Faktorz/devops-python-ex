@@ -9,7 +9,7 @@ setup_metrics(application)
 
 @application.route("/")
 def hello():
-    return "Hello New World!"
+    return "Hello World!"
 
 @application.route("/test")
 def test():
